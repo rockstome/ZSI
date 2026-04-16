@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.10.27)  16 APR 2026 21:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.10.27)  16 APR 2026 23:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -231,101 +231,334 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <8> on input line 4.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 4.
-)
+
+
+[1])
 \tf@toc=\write3
 \openout3 = `ZSI-TeX-dok.toc'.
 
 
 
-[1]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 5
-6.
+[2]
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 6
+0.
  (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-<media/logo_ZSI.jpeg, id=12, 1027.84pt x 1027.84pt>
-File: media/logo_ZSI.jpeg Graphic file (type jpg)
-<use media/logo_ZSI.jpeg>
-Package pdftex.def Info: media/logo_ZSI.jpeg  used on input line 64.
-(pdftex.def)             Requested size: 195.0pt x 194.99364pt.
+Overfull \hbox (10.93454pt too wide) in paragraph at lines 66--67
+\T1/lmr/m/n/12 Celem pro-jektu jest ana-liza po-rów-naw-cza naj-po-pu-lar-niej-
+szych roz-wi¡-za« otwar-
+ []
 
 
-[2{C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc} 
-<./media/logo_ZSI.jpeg>]
 
-[3]
+[3{C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}]
+
 
 [4]
-Overfull \hbox (1.563pt too wide) in paragraph at lines 108--109
+
+[5]
+Overfull \hbox (1.563pt too wide) in paragraph at lines 118--119
 \T1/lmr/m/n/12 co po-zwo-liªo na od-se-pa-ro-wa-nie lo-giki biz-ne-so-wej od wa
 r-stwy gra-ficz-nej. Umo»-
  []
 
 
 
-[5]
-Overfull \hbox (2.16176pt too wide) in paragraph at lines 117--118
+[6]
+Overfull \hbox (2.16176pt too wide) in paragraph at lines 127--128
 []\T1/lmr/bx/n/12 Systemy IDS/IPS: \T1/lmr/m/n/12 pfSense daje u»yt-kow-ni-kowi
  wy-bór mi¦-dzy dwoma
  []
 
 
-Overfull \hbox (9.13948pt too wide) in paragraph at lines 119--120
+Overfull \hbox (9.13948pt too wide) in paragraph at lines 129--130
 \T1/lmr/m/n/12 dar-dem dla ad-mi-ni-stra-to-rów jest dar-mowy, bar-dzo po-t¦»ny
  pa-kiet pfBloc-
  []
 
 
 
-[6]
-
 [7]
 
 [8]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-61.
+
+[9]
+
+[10]
+Overfull \hbox (9.17355pt too wide) in paragraph at lines 180--181
+\T1/lmr/m/n/12 System cha-rak-te-ry-zuje si¦ rów-nie» sto-sun-kowo nie-wiel-kim
+i wy-ma-ga-niami sprz¦-
+ []
+
+
+
+[11]
+
+[12]
+Overfull \hbox (3.02115pt too wide) in paragraph at lines 207--208
+[]\T1/lmr/m/n/12 W re-zul-ta-cie IP-Fire zaj-muje po-zy-cj¦ roz-wi¡-za-nia sta-
+bil-nego i do-brze utrzy-
+ []
+
+
+
+[13]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
+25.
  (C:\Users\tomas\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Overfull \hbox (8.5001pt too wide) in paragraph at lines 161--162
+Overfull \hbox (8.5001pt too wide) in paragraph at lines 225--226
  \T1/lmr/bx/n/12 UCI --- Uni-fied Con-fi-gu-ra-tion In-ter-face[] \T1/lmr/m/n/1
 2 Naj-wi¦k-sz¡ in-no-wa-cj¡ OpenWrt
  []
 
 
 
-[9]
+[14]
 
-[10]
+[15]
 
-[11]
+[16]
+<media/ipfire/1.png, id=61, 1147.28625pt x 627.34375pt>
+File: media/ipfire/1.png Graphic file (type png)
+<use media/ipfire/1.png>
+Package pdftex.def Info: media/ipfire/1.png  used on input line 265.
+(pdftex.def)             Requested size: 350.99762pt x 191.91869pt.
+<media/ipfire/2.png, id=63, 1147.28625pt x 627.34375pt>
+File: media/ipfire/2.png Graphic file (type png)
+<use media/ipfire/2.png>
+Package pdftex.def Info: media/ipfire/2.png  used on input line 274.
+(pdftex.def)             Requested size: 350.99762pt x 191.91869pt.
+<media/ipfire/3.png, id=64, 896.34875pt x 609.27625pt>
+File: media/ipfire/3.png Graphic file (type png)
+<use media/ipfire/3.png>
+Package pdftex.def Info: media/ipfire/3.png  used on input line 284.
+(pdftex.def)             Requested size: 350.99762pt x 238.58363pt.
 
-[12]
 
-[13]
+[17 <./media/ipfire/1.png>]
+<media/ipfire/4.png, id=69, 896.34875pt x 609.27625pt>
+File: media/ipfire/4.png Graphic file (type png)
+<use media/ipfire/4.png>
+Package pdftex.def Info: media/ipfire/4.png  used on input line 293.
+(pdftex.def)             Requested size: 350.99762pt x 238.58363pt.
 
-[14] (ZSI-TeX-dok.aux)
+
+[18 <./media/ipfire/2.png> <./media/ipfire/3.png>]
+<media/ipfire/5.png, id=76, 896.34875pt x 609.27625pt>
+File: media/ipfire/5.png Graphic file (type png)
+<use media/ipfire/5.png>
+Package pdftex.def Info: media/ipfire/5.png  used on input line 306.
+(pdftex.def)             Requested size: 350.99762pt x 238.58363pt.
+<media/ipfire/6.png, id=77, 896.34875pt x 609.27625pt>
+File: media/ipfire/6.png Graphic file (type png)
+<use media/ipfire/6.png>
+Package pdftex.def Info: media/ipfire/6.png  used on input line 315.
+(pdftex.def)             Requested size: 350.99762pt x 238.58363pt.
+<media/ipfire/7.png, id=78, 896.34875pt x 609.27625pt>
+File: media/ipfire/7.png Graphic file (type png)
+<use media/ipfire/7.png>
+Package pdftex.def Info: media/ipfire/7.png  used on input line 321.
+(pdftex.def)             Requested size: 350.99762pt x 238.58363pt.
+<media/ipfire/8.png, id=79, 896.34875pt x 609.27625pt>
+File: media/ipfire/8.png Graphic file (type png)
+<use media/ipfire/8.png>
+Package pdftex.def Info: media/ipfire/8.png  used on input line 330.
+(pdftex.def)             Requested size: 350.99762pt x 238.58363pt.
+
+
+[19 <./media/ipfire/4.png>]
+
+[20 <./media/ipfire/5.png> <./media/ipfire/6.png>]
+<media/ipfire/9.png, id=89, 896.34875pt x 609.27625pt>
+File: media/ipfire/9.png Graphic file (type png)
+<use media/ipfire/9.png>
+Package pdftex.def Info: media/ipfire/9.png  used on input line 342.
+(pdftex.def)             Requested size: 350.99762pt x 238.58363pt.
+<media/ipfire/10.png, id=90, 1286.8075pt x 804.00375pt>
+File: media/ipfire/10.png Graphic file (type png)
+<use media/ipfire/10.png>
+Package pdftex.def Info: media/ipfire/10.png  used on input line 348.
+(pdftex.def)             Requested size: 350.99762pt x 219.30444pt.
+<media/ipfire/11.png, id=91, 1286.8075pt x 702.625pt>
+File: media/ipfire/11.png Graphic file (type png)
+<use media/ipfire/11.png>
+Package pdftex.def Info: media/ipfire/11.png  used on input line 354.
+(pdftex.def)             Requested size: 350.99762pt x 191.65181pt.
+
+Overfull \hbox (22.6182pt too wide) in paragraph at lines 360--361
+\T1/lmr/m/n/12 Aby uzy-ska¢ do-st¦p do kon-soli wpi-su-jemy w pa-sku prze-gl¡-d
+arki https://ipfire:444,
+ []
+
+<media/ipfire/12.png, id=92, 1286.8075pt x 702.625pt>
+File: media/ipfire/12.png Graphic file (type png)
+<use media/ipfire/12.png>
+Package pdftex.def Info: media/ipfire/12.png  used on input line 365.
+(pdftex.def)             Requested size: 350.99762pt x 191.65181pt.
+
+
+[21 <./media/ipfire/7.png>]
+
+[22 <./media/ipfire/8.png> <./media/ipfire/9.png>]
+
+[23 <./media/ipfire/10.png> <./media/ipfire/11.png>]
+<media/ipfire/13.png, id=107, 1286.8075pt x 702.625pt>
+File: media/ipfire/13.png Graphic file (type png)
+<use media/ipfire/13.png>
+Package pdftex.def Info: media/ipfire/13.png  used on input line 373.
+(pdftex.def)             Requested size: 350.99762pt x 191.65181pt.
+<media/ipfire/14.png, id=108, 1286.8075pt x 702.625pt>
+File: media/ipfire/14.png Graphic file (type png)
+<use media/ipfire/14.png>
+Package pdftex.def Info: media/ipfire/14.png  used on input line 381.
+(pdftex.def)             Requested size: 350.99762pt x 191.65181pt.
+<media/ipfire/15.png, id=109, 1286.8075pt x 702.625pt>
+File: media/ipfire/15.png Graphic file (type png)
+<use media/ipfire/15.png>
+Package pdftex.def Info: media/ipfire/15.png  used on input line 389.
+(pdftex.def)             Requested size: 350.99762pt x 191.65181pt.
+<media/ipfire/16.png, id=110, 1286.8075pt x 702.625pt>
+File: media/ipfire/16.png Graphic file (type png)
+<use media/ipfire/16.png>
+Package pdftex.def Info: media/ipfire/16.png  used on input line 397.
+(pdftex.def)             Requested size: 350.99762pt x 191.65181pt.
+
+
+[24 <./media/ipfire/12.png>]
+
+[25 <./media/ipfire/13.png> <./media/ipfire/14.png>]
+
+[26 <./media/ipfire/15.png> <./media/ipfire/16.png>]
+<media/ipfire/17.png, id=126, 1286.8075pt x 702.625pt>
+File: media/ipfire/17.png Graphic file (type png)
+<use media/ipfire/17.png>
+Package pdftex.def Info: media/ipfire/17.png  used on input line 410.
+(pdftex.def)             Requested size: 350.99762pt x 191.65181pt.
+<media/ipfire/18.png, id=127, 1286.8075pt x 702.625pt>
+File: media/ipfire/18.png Graphic file (type png)
+<use media/ipfire/18.png>
+Package pdftex.def Info: media/ipfire/18.png  used on input line 418.
+(pdftex.def)             Requested size: 350.99762pt x 191.65181pt.
+<media/ipfire/19.png, id=128, 1286.8075pt x 702.625pt>
+File: media/ipfire/19.png Graphic file (type png)
+<use media/ipfire/19.png>
+Package pdftex.def Info: media/ipfire/19.png  used on input line 426.
+(pdftex.def)             Requested size: 350.99762pt x 191.65181pt.
+<media/ipfire/20.png, id=129, 1286.8075pt x 702.625pt>
+File: media/ipfire/20.png Graphic file (type png)
+<use media/ipfire/20.png>
+Package pdftex.def Info: media/ipfire/20.png  used on input line 434.
+(pdftex.def)             Requested size: 350.99762pt x 191.65181pt.
+
+Overfull \hbox (21.80301pt too wide) in paragraph at lines 431--438
+\T1/lmr/m/n/12 (po-przez klik-ni¦-cie przy-ci-sku "Update now"w sek-cji "URL fi
+l-ter ma-in-te-nance"[Rys.
+ []
+
+<media/ipfire/21.png, id=130, 1286.8075pt x 702.625pt>
+File: media/ipfire/21.png Graphic file (type png)
+<use media/ipfire/21.png>
+Package pdftex.def Info: media/ipfire/21.png  used on input line 442.
+(pdftex.def)             Requested size: 350.99762pt x 191.65181pt.
+
+
+[27 <./media/ipfire/17.png>]
+
+[28 <./media/ipfire/18.png> <./media/ipfire/19.png>]
+<media/ipfire/22.png, id=140, 1286.8075pt x 702.625pt>
+File: media/ipfire/22.png Graphic file (type png)
+<use media/ipfire/22.png>
+Package pdftex.def Info: media/ipfire/22.png  used on input line 450.
+(pdftex.def)             Requested size: 350.99762pt x 191.65181pt.
+<media/ipfire/23.png, id=141, 1286.8075pt x 702.625pt>
+File: media/ipfire/23.png Graphic file (type png)
+<use media/ipfire/23.png>
+Package pdftex.def Info: media/ipfire/23.png  used on input line 458.
+(pdftex.def)             Requested size: 350.99762pt x 191.65181pt.
+<media/ipfire/24.png, id=142, 1286.8075pt x 702.625pt>
+File: media/ipfire/24.png Graphic file (type png)
+<use media/ipfire/24.png>
+Package pdftex.def Info: media/ipfire/24.png  used on input line 466.
+(pdftex.def)             Requested size: 350.99762pt x 191.65181pt.
+
+
+[29 <./media/ipfire/20.png> <./media/ipfire/21.png>]
+
+[30 <./media/ipfire/22.png> <./media/ipfire/23.png>]
+
+[31 <./media/ipfire/24.png>]
+
+[32]
+
+[33]
+Overfull \hbox (12.78557pt too wide) in paragraph at lines 511--512
+[]\T1/lmr/m/n/12 Historia forka OPN-sense: https://docs.opnsense.org/history/th
+efork.html 
+ []
+
+
+Overfull \hbox (18.50282pt too wide) in paragraph at lines 512--513
+[]\T1/lmr/m/n/12 pfSense 2023 XSS vul-ne-ra-bi-lity: https://thehackernews.com/
+2023/12/new-
+ []
+
+
+Overfull \hbox (62.71854pt too wide) in paragraph at lines 513--514
+[]\T1/lmr/m/n/12 Funkcje OPN-sense: https://opnsense.org/wp-content/uploads/202
+5/11/OPNsense-
+ []
+
+
+Overfull \hbox (68.53346pt too wide) in paragraph at lines 514--515
+[]\T1/lmr/m/n/12 Wymagania sprz¦-towe OPN-sense: https://docs.opnsense.org/manu
+al/hardware.html 
+ []
+
+
+Overfull \hbox (188.16217pt too wide) in paragraph at lines 515--516
+[]\T1/lmr/m/n/12 Minimalne wy-ma-ga-nia sprz¦-towe pfSense: https://docs.netgat
+e.com/pfsense/en/latest/hardware/minimum-
+ []
+
+
+Overfull \hbox (20.64565pt too wide) in paragraph at lines 516--517
+[]\T1/lmr/m/n/12 Ogólne in-for-ma-cje o pro-jek-cie IP-Fire: https://de.wikiped
+ia.org/wiki/IPFire 
+ []
+
+
+Overfull \hbox (29.20018pt too wide) in paragraph at lines 517--518
+[]\T1/lmr/m/n/12 Informacje tech-niczne na te-mat pro-jektu IP-Fire: https://ww
+w.ipfire.org/docs 
+ []
+
+
+
+[34] (ZSI-TeX-dok.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-10-09>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 3425 strings out of 473897
- 58210 string characters out of 5726461
- 460283 words of memory out of 5000000
- 26264 multiletter control sequences out of 15000+600000
+ 3618 strings out of 473897
+ 62701 string characters out of 5726461
+ 462647 words of memory out of 5000000
+ 26457 multiletter control sequences out of 15000+600000
  597380 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,6n,65p,1008b,355s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,7n,65p,1008b,355s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pf
 b><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb
 ><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb
 ><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb
 >
-Output written on ZSI-TeX-dok.pdf (15 pages, 365182 bytes).
+Output written on ZSI-TeX-dok.pdf (35 pages, 13973553 bytes).
 PDF statistics:
- 78 PDF objects out of 1000 (max. 8388607)
+ 189 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 126 words of extra memory for PDF output out of 10000 (max. 10000000)
 
