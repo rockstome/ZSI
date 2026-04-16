@@ -7,7 +7,7 @@
 \contentsline {subsection}{\numberline {2.1}Założenia techniczne i nietechniczne}{4}{}%
 \contentsline {subsection}{\numberline {2.2}Stos technologiczny}{4}{}%
 \contentsline {subsection}{\numberline {2.3}Oczekiwane rezultaty projektu}{4}{}%
-\contentsline {section}{\numberline {3}Realizacja projektu}{5}{}%
+\contentsline {section}{\numberline {3}Analiza otwartoźródłowych systemów firewall}{5}{}%
 \contentsline {subsection}{\numberline {3.1}pfSense vs OPNsense}{5}{}%
 \contentsline {subsubsection}{\numberline {3.1.1}Historia i geneza --- projekt m0n0wall}{5}{}%
 \contentsline {subsubsection}{\numberline {3.1.2}Powstanie pfSense}{5}{}%

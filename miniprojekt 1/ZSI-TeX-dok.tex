@@ -92,7 +92,7 @@ Kompleksowe zestawienie cech wymienionych systemów oraz działająca przykłado
 
 
 \newpage
-\section{Realizacja projektu}
+\section{Analiza otwartoźródłowych systemów firewall}
 
 
 
@@ -495,11 +495,11 @@ W rezultacie wybór odpowiedniego rozwiązania zależy od konkretnego zastosowan
 
 \newpage
 \section{Wnioski}
-	\begin{itemize}
-		\item \textit{Spostrzeżenia}
-		\item \textit{Osiągnięcia}
-		\item \textit{Potencjał rozwoju}
-	\end{itemize}
+\begin{itemize}
+    \item \textbf{Spostrzeżenia:} Rozwiązania otwartoźródłowe takie jak OPNsense, pfSense, IPFire oraz OpenWrt oferują zaawansowane możliwości, które nierzadko dorównują lub wręcz przewyższają funkcjonalności komercyjnych systemów firewall. Różnice w architekturze (FreeBSD vs Linux) oraz w podejściu do zarządzania sprawiają, że każdy z systemów znajduje swoje unikalne zastosowanie --- od domowych routerów po rozbudowane sieci korporacyjne.
+    \item \textbf{Osiągnięcia:} W ramach projektu pomyślnie przeprowadzono analizę porównawczą wybranych systemów, identyfikując ich mocne i słabe strony. Ponadto, z powodzeniem wdrożono i skonfigurowano środowisko testowe oparte na systemie IPFire. Udowodniono w praktyce łatwość implementacji podstawowych polityk bezpieczeństwa, takich jak filtrowanie treści przy użyciu wbudowanego proxy i mechanizmu URL Filter.
+    \item \textbf{Potencjał rozwoju:} Opracowane środowisko testowe może stanowić punkt wyjścia do dalszych badań. Naturalnym rozwinięciem projektu byłoby wdrożenie i porównanie wydajności badanych systemów (np. IPFire vs OPNsense) w warunkach dużego obciążenia sieciowego, a także przetestowanie bardziej zaawansowanych mechanizmów, takich jak systemy detekcji i prewencji włamań (IDS/IPS - np. Suricata, Zeek) czy zaawansowane tunele VPN (WireGuard, IPsec) działające w topologii site-to-site.
+\end{itemize}
 
 
 
@@ -515,6 +515,8 @@ W rezultacie wybór odpowiedniego rozwiązania zależy od konkretnego zastosowan
 	\item Minimalne wymagania sprzętowe pfSense: https://docs.netgate.com/pfsense/en/latest/hardware/minimum-requirements.html
 	\item Ogólne informacje o projekcie IPFire: https://de.wikipedia.org/wiki/IPFire
 	\item Informacje techniczne na temat projektu IPFire: https://www.ipfire.org/docs
+	\item Oficjalna dokumentacja OpenWrt: https://openwrt.org/docs/start
+	\item Historia projektu OpenWrt: https://openwrt.org/about/history
 \end{enumerate}
 
 \end{document}
