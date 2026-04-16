@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.10.27)  16 APR 2026 23:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.10.27)  16 APR 2026 23:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -321,71 +321,71 @@ Overfull \hbox (8.5001pt too wide) in paragraph at lines 225--226
 [15]
 
 [16]
-<media/ipfire/1.png, id=61, 1147.28625pt x 627.34375pt>
-File: media/ipfire/1.png Graphic file (type png)
-<use media/ipfire/1.png>
-Package pdftex.def Info: media/ipfire/1.png  used on input line 265.
-(pdftex.def)             Requested size: 350.99762pt x 191.91869pt.
-<media/ipfire/2.png, id=63, 1147.28625pt x 627.34375pt>
-File: media/ipfire/2.png Graphic file (type png)
-<use media/ipfire/2.png>
-Package pdftex.def Info: media/ipfire/2.png  used on input line 274.
-(pdftex.def)             Requested size: 350.99762pt x 191.91869pt.
-<media/ipfire/3.png, id=64, 896.34875pt x 609.27625pt>
-File: media/ipfire/3.png Graphic file (type png)
-<use media/ipfire/3.png>
-Package pdftex.def Info: media/ipfire/3.png  used on input line 284.
-(pdftex.def)             Requested size: 350.99762pt x 238.58363pt.
+<media/ipfire/1.jpg, id=61, 2294.5725pt x 1254.6875pt>
+File: media/ipfire/1.jpg Graphic file (type jpg)
+<use media/ipfire/1.jpg>
+Package pdftex.def Info: media/ipfire/1.jpg  used on input line 265.
+(pdftex.def)             Requested size: 350.99762pt x 191.90912pt.
+<media/ipfire/2.jpg, id=62, 2294.5725pt x 1254.6875pt>
+File: media/ipfire/2.jpg Graphic file (type jpg)
+<use media/ipfire/2.jpg>
+Package pdftex.def Info: media/ipfire/2.jpg  used on input line 274.
+(pdftex.def)             Requested size: 350.99762pt x 191.90912pt.
+<media/ipfire/3.jpg, id=63, 1792.6975pt x 1218.5525pt>
+File: media/ipfire/3.jpg Graphic file (type jpg)
+<use media/ipfire/3.jpg>
+Package pdftex.def Info: media/ipfire/3.jpg  used on input line 284.
+(pdftex.def)             Requested size: 350.99762pt x 238.57436pt.
 
 
-[17 <./media/ipfire/1.png>]
-<media/ipfire/4.png, id=69, 896.34875pt x 609.27625pt>
-File: media/ipfire/4.png Graphic file (type png)
-<use media/ipfire/4.png>
-Package pdftex.def Info: media/ipfire/4.png  used on input line 293.
-(pdftex.def)             Requested size: 350.99762pt x 238.58363pt.
+[17 <./media/ipfire/1.jpg>]
+<media/ipfire/4.jpg, id=67, 1792.6975pt x 1218.5525pt>
+File: media/ipfire/4.jpg Graphic file (type jpg)
+<use media/ipfire/4.jpg>
+Package pdftex.def Info: media/ipfire/4.jpg  used on input line 293.
+(pdftex.def)             Requested size: 350.99762pt x 238.57436pt.
 
 
-[18 <./media/ipfire/2.png> <./media/ipfire/3.png>]
-<media/ipfire/5.png, id=76, 896.34875pt x 609.27625pt>
-File: media/ipfire/5.png Graphic file (type png)
-<use media/ipfire/5.png>
-Package pdftex.def Info: media/ipfire/5.png  used on input line 306.
-(pdftex.def)             Requested size: 350.99762pt x 238.58363pt.
-<media/ipfire/6.png, id=77, 896.34875pt x 609.27625pt>
-File: media/ipfire/6.png Graphic file (type png)
-<use media/ipfire/6.png>
-Package pdftex.def Info: media/ipfire/6.png  used on input line 315.
-(pdftex.def)             Requested size: 350.99762pt x 238.58363pt.
-<media/ipfire/7.png, id=78, 896.34875pt x 609.27625pt>
-File: media/ipfire/7.png Graphic file (type png)
-<use media/ipfire/7.png>
-Package pdftex.def Info: media/ipfire/7.png  used on input line 321.
-(pdftex.def)             Requested size: 350.99762pt x 238.58363pt.
-<media/ipfire/8.png, id=79, 896.34875pt x 609.27625pt>
-File: media/ipfire/8.png Graphic file (type png)
-<use media/ipfire/8.png>
-Package pdftex.def Info: media/ipfire/8.png  used on input line 330.
-(pdftex.def)             Requested size: 350.99762pt x 238.58363pt.
+[18 <./media/ipfire/2.jpg> <./media/ipfire/3.jpg>]
+<media/ipfire/5.jpg, id=72, 1792.6975pt x 1218.5525pt>
+File: media/ipfire/5.jpg Graphic file (type jpg)
+<use media/ipfire/5.jpg>
+Package pdftex.def Info: media/ipfire/5.jpg  used on input line 306.
+(pdftex.def)             Requested size: 350.99762pt x 238.57436pt.
+<media/ipfire/6.jpg, id=73, 1792.6975pt x 1218.5525pt>
+File: media/ipfire/6.jpg Graphic file (type jpg)
+<use media/ipfire/6.jpg>
+Package pdftex.def Info: media/ipfire/6.jpg  used on input line 315.
+(pdftex.def)             Requested size: 350.99762pt x 238.57436pt.
+<media/ipfire/7.jpg, id=74, 1792.6975pt x 1218.5525pt>
+File: media/ipfire/7.jpg Graphic file (type jpg)
+<use media/ipfire/7.jpg>
+Package pdftex.def Info: media/ipfire/7.jpg  used on input line 321.
+(pdftex.def)             Requested size: 350.99762pt x 238.57436pt.
+<media/ipfire/8.jpg, id=75, 1792.6975pt x 1218.5525pt>
+File: media/ipfire/8.jpg Graphic file (type jpg)
+<use media/ipfire/8.jpg>
+Package pdftex.def Info: media/ipfire/8.jpg  used on input line 330.
+(pdftex.def)             Requested size: 350.99762pt x 238.57436pt.
 
 
-[19 <./media/ipfire/4.png>]
+[19 <./media/ipfire/4.jpg>]
 
-[20 <./media/ipfire/5.png> <./media/ipfire/6.png>]
-<media/ipfire/9.png, id=89, 896.34875pt x 609.27625pt>
-File: media/ipfire/9.png Graphic file (type png)
-<use media/ipfire/9.png>
-Package pdftex.def Info: media/ipfire/9.png  used on input line 342.
-(pdftex.def)             Requested size: 350.99762pt x 238.58363pt.
-<media/ipfire/10.png, id=90, 1286.8075pt x 804.00375pt>
-File: media/ipfire/10.png Graphic file (type png)
-<use media/ipfire/10.png>
-Package pdftex.def Info: media/ipfire/10.png  used on input line 348.
+[20 <./media/ipfire/5.jpg> <./media/ipfire/6.jpg>]
+<media/ipfire/9.jpg, id=82, 1792.6975pt x 1218.5525pt>
+File: media/ipfire/9.jpg Graphic file (type jpg)
+<use media/ipfire/9.jpg>
+Package pdftex.def Info: media/ipfire/9.jpg  used on input line 342.
+(pdftex.def)             Requested size: 350.99762pt x 238.57436pt.
+<media/ipfire/10.jpg, id=83, 2573.615pt x 1608.0075pt>
+File: media/ipfire/10.jpg Graphic file (type jpg)
+<use media/ipfire/10.jpg>
+Package pdftex.def Info: media/ipfire/10.jpg  used on input line 348.
 (pdftex.def)             Requested size: 350.99762pt x 219.30444pt.
-<media/ipfire/11.png, id=91, 1286.8075pt x 702.625pt>
-File: media/ipfire/11.png Graphic file (type png)
-<use media/ipfire/11.png>
-Package pdftex.def Info: media/ipfire/11.png  used on input line 354.
+<media/ipfire/11.jpg, id=84, 2573.615pt x 1405.25pt>
+File: media/ipfire/11.jpg Graphic file (type jpg)
+<use media/ipfire/11.jpg>
+Package pdftex.def Info: media/ipfire/11.jpg  used on input line 354.
 (pdftex.def)             Requested size: 350.99762pt x 191.65181pt.
 
 Overfull \hbox (22.6182pt too wide) in paragraph at lines 360--361
@@ -393,64 +393,64 @@ Overfull \hbox (22.6182pt too wide) in paragraph at lines 360--361
 arki https://ipfire:444,
  []
 
-<media/ipfire/12.png, id=92, 1286.8075pt x 702.625pt>
-File: media/ipfire/12.png Graphic file (type png)
-<use media/ipfire/12.png>
-Package pdftex.def Info: media/ipfire/12.png  used on input line 365.
+<media/ipfire/12.jpg, id=85, 2573.615pt x 1405.25pt>
+File: media/ipfire/12.jpg Graphic file (type jpg)
+<use media/ipfire/12.jpg>
+Package pdftex.def Info: media/ipfire/12.jpg  used on input line 365.
 (pdftex.def)             Requested size: 350.99762pt x 191.65181pt.
 
 
-[21 <./media/ipfire/7.png>]
+[21 <./media/ipfire/7.jpg>]
 
-[22 <./media/ipfire/8.png> <./media/ipfire/9.png>]
+[22 <./media/ipfire/8.jpg> <./media/ipfire/9.jpg>]
 
-[23 <./media/ipfire/10.png> <./media/ipfire/11.png>]
-<media/ipfire/13.png, id=107, 1286.8075pt x 702.625pt>
-File: media/ipfire/13.png Graphic file (type png)
-<use media/ipfire/13.png>
-Package pdftex.def Info: media/ipfire/13.png  used on input line 373.
+[23 <./media/ipfire/10.jpg> <./media/ipfire/11.jpg>]
+<media/ipfire/13.jpg, id=95, 2573.615pt x 1405.25pt>
+File: media/ipfire/13.jpg Graphic file (type jpg)
+<use media/ipfire/13.jpg>
+Package pdftex.def Info: media/ipfire/13.jpg  used on input line 373.
 (pdftex.def)             Requested size: 350.99762pt x 191.65181pt.
-<media/ipfire/14.png, id=108, 1286.8075pt x 702.625pt>
-File: media/ipfire/14.png Graphic file (type png)
-<use media/ipfire/14.png>
-Package pdftex.def Info: media/ipfire/14.png  used on input line 381.
+<media/ipfire/14.jpg, id=96, 2573.615pt x 1405.25pt>
+File: media/ipfire/14.jpg Graphic file (type jpg)
+<use media/ipfire/14.jpg>
+Package pdftex.def Info: media/ipfire/14.jpg  used on input line 381.
 (pdftex.def)             Requested size: 350.99762pt x 191.65181pt.
-<media/ipfire/15.png, id=109, 1286.8075pt x 702.625pt>
-File: media/ipfire/15.png Graphic file (type png)
-<use media/ipfire/15.png>
-Package pdftex.def Info: media/ipfire/15.png  used on input line 389.
+<media/ipfire/15.jpg, id=97, 2573.615pt x 1405.25pt>
+File: media/ipfire/15.jpg Graphic file (type jpg)
+<use media/ipfire/15.jpg>
+Package pdftex.def Info: media/ipfire/15.jpg  used on input line 389.
 (pdftex.def)             Requested size: 350.99762pt x 191.65181pt.
-<media/ipfire/16.png, id=110, 1286.8075pt x 702.625pt>
-File: media/ipfire/16.png Graphic file (type png)
-<use media/ipfire/16.png>
-Package pdftex.def Info: media/ipfire/16.png  used on input line 397.
+<media/ipfire/16.jpg, id=98, 2573.615pt x 1405.25pt>
+File: media/ipfire/16.jpg Graphic file (type jpg)
+<use media/ipfire/16.jpg>
+Package pdftex.def Info: media/ipfire/16.jpg  used on input line 397.
 (pdftex.def)             Requested size: 350.99762pt x 191.65181pt.
 
 
-[24 <./media/ipfire/12.png>]
+[24 <./media/ipfire/12.jpg>]
 
-[25 <./media/ipfire/13.png> <./media/ipfire/14.png>]
+[25 <./media/ipfire/13.jpg> <./media/ipfire/14.jpg>]
 
-[26 <./media/ipfire/15.png> <./media/ipfire/16.png>]
-<media/ipfire/17.png, id=126, 1286.8075pt x 702.625pt>
-File: media/ipfire/17.png Graphic file (type png)
-<use media/ipfire/17.png>
-Package pdftex.def Info: media/ipfire/17.png  used on input line 410.
+[26 <./media/ipfire/15.jpg> <./media/ipfire/16.jpg>]
+<media/ipfire/17.jpg, id=109, 2573.615pt x 1405.25pt>
+File: media/ipfire/17.jpg Graphic file (type jpg)
+<use media/ipfire/17.jpg>
+Package pdftex.def Info: media/ipfire/17.jpg  used on input line 410.
 (pdftex.def)             Requested size: 350.99762pt x 191.65181pt.
-<media/ipfire/18.png, id=127, 1286.8075pt x 702.625pt>
-File: media/ipfire/18.png Graphic file (type png)
-<use media/ipfire/18.png>
-Package pdftex.def Info: media/ipfire/18.png  used on input line 418.
+<media/ipfire/18.jpg, id=110, 2573.615pt x 1405.25pt>
+File: media/ipfire/18.jpg Graphic file (type jpg)
+<use media/ipfire/18.jpg>
+Package pdftex.def Info: media/ipfire/18.jpg  used on input line 418.
 (pdftex.def)             Requested size: 350.99762pt x 191.65181pt.
-<media/ipfire/19.png, id=128, 1286.8075pt x 702.625pt>
-File: media/ipfire/19.png Graphic file (type png)
-<use media/ipfire/19.png>
-Package pdftex.def Info: media/ipfire/19.png  used on input line 426.
+<media/ipfire/19.jpg, id=111, 2573.615pt x 1405.25pt>
+File: media/ipfire/19.jpg Graphic file (type jpg)
+<use media/ipfire/19.jpg>
+Package pdftex.def Info: media/ipfire/19.jpg  used on input line 426.
 (pdftex.def)             Requested size: 350.99762pt x 191.65181pt.
-<media/ipfire/20.png, id=129, 1286.8075pt x 702.625pt>
-File: media/ipfire/20.png Graphic file (type png)
-<use media/ipfire/20.png>
-Package pdftex.def Info: media/ipfire/20.png  used on input line 434.
+<media/ipfire/20.jpg, id=112, 2573.615pt x 1405.25pt>
+File: media/ipfire/20.jpg Graphic file (type jpg)
+<use media/ipfire/20.jpg>
+Package pdftex.def Info: media/ipfire/20.jpg  used on input line 434.
 (pdftex.def)             Requested size: 350.99762pt x 191.65181pt.
 
 Overfull \hbox (21.80301pt too wide) in paragraph at lines 431--438
@@ -458,38 +458,38 @@ Overfull \hbox (21.80301pt too wide) in paragraph at lines 431--438
 l-ter ma-in-te-nance"[Rys.
  []
 
-<media/ipfire/21.png, id=130, 1286.8075pt x 702.625pt>
-File: media/ipfire/21.png Graphic file (type png)
-<use media/ipfire/21.png>
-Package pdftex.def Info: media/ipfire/21.png  used on input line 442.
+<media/ipfire/21.jpg, id=113, 2573.615pt x 1405.25pt>
+File: media/ipfire/21.jpg Graphic file (type jpg)
+<use media/ipfire/21.jpg>
+Package pdftex.def Info: media/ipfire/21.jpg  used on input line 442.
 (pdftex.def)             Requested size: 350.99762pt x 191.65181pt.
 
 
-[27 <./media/ipfire/17.png>]
+[27 <./media/ipfire/17.jpg>]
 
-[28 <./media/ipfire/18.png> <./media/ipfire/19.png>]
-<media/ipfire/22.png, id=140, 1286.8075pt x 702.625pt>
-File: media/ipfire/22.png Graphic file (type png)
-<use media/ipfire/22.png>
-Package pdftex.def Info: media/ipfire/22.png  used on input line 450.
+[28 <./media/ipfire/18.jpg> <./media/ipfire/19.jpg>]
+<media/ipfire/22.jpg, id=120, 2573.615pt x 1405.25pt>
+File: media/ipfire/22.jpg Graphic file (type jpg)
+<use media/ipfire/22.jpg>
+Package pdftex.def Info: media/ipfire/22.jpg  used on input line 450.
 (pdftex.def)             Requested size: 350.99762pt x 191.65181pt.
-<media/ipfire/23.png, id=141, 1286.8075pt x 702.625pt>
-File: media/ipfire/23.png Graphic file (type png)
-<use media/ipfire/23.png>
-Package pdftex.def Info: media/ipfire/23.png  used on input line 458.
+<media/ipfire/23.jpg, id=121, 2573.615pt x 1405.25pt>
+File: media/ipfire/23.jpg Graphic file (type jpg)
+<use media/ipfire/23.jpg>
+Package pdftex.def Info: media/ipfire/23.jpg  used on input line 458.
 (pdftex.def)             Requested size: 350.99762pt x 191.65181pt.
-<media/ipfire/24.png, id=142, 1286.8075pt x 702.625pt>
-File: media/ipfire/24.png Graphic file (type png)
-<use media/ipfire/24.png>
-Package pdftex.def Info: media/ipfire/24.png  used on input line 466.
+<media/ipfire/24.jpg, id=122, 2573.615pt x 1405.25pt>
+File: media/ipfire/24.jpg Graphic file (type jpg)
+<use media/ipfire/24.jpg>
+Package pdftex.def Info: media/ipfire/24.jpg  used on input line 466.
 (pdftex.def)             Requested size: 350.99762pt x 191.65181pt.
 
 
-[29 <./media/ipfire/20.png> <./media/ipfire/21.png>]
+[29 <./media/ipfire/20.jpg> <./media/ipfire/21.jpg>]
 
-[30 <./media/ipfire/22.png> <./media/ipfire/23.png>]
+[30 <./media/ipfire/22.jpg> <./media/ipfire/23.jpg>]
 
-[31 <./media/ipfire/24.png>]
+[31 <./media/ipfire/24.jpg>]
 
 [32]
 
@@ -556,9 +556,9 @@ b><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb
 ><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb
 ><C:/Users/tomas/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb
 >
-Output written on ZSI-TeX-dok.pdf (35 pages, 13974700 bytes).
+Output written on ZSI-TeX-dok.pdf (35 pages, 5902692 bytes).
 PDF statistics:
- 189 PDF objects out of 1000 (max. 8388607)
+ 164 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  126 words of extra memory for PDF output out of 10000 (max. 10000000)
 
