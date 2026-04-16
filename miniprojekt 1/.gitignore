@@ -1,0 +1,17 @@
+# Zignoruj wszystko
+*
+
+# Wyjątki - pliki, które chcemy śledzić
+!*.tex
+!*.pdf
+!media/
+!media/**
+!.gitignore
+
+# Pliki tymczasowe LaTeX (na wszelki wypadek, gdyby wyjątki były zbyt szerokie)
+*.aux
+*.log
+*.toc
+*.synctex.gz
+*.fdb_latexmk
+*.fls
