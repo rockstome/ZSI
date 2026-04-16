@@ -1,0 +1,215 @@
+% !TeX spellcheck = pl_PL-Polish
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[polish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\selectlanguage{polish}
+\usepackage{graphicx}
+\usepackage{xcolor}
+
+\def\projectName{Przegląd rozwiązań opensource typu firewall wraz z przykładową konfiguracją}
+\def\authorA{Wiktor Jarosz}
+\def\authorB{Andrzej Machnik}
+\def\authorC{Tomasz Solarz}
+\newcommand\todo[1]{\textcolor{red}{#1}}
+
+\begin{document}
+\pagenumbering{gobble}
+\clearpage
+	\begin{figure}[h]
+		\centering
+		%\includegraphics[width=0.5\linewidth]{media/polsl_logo_pion_en_rgb.png}
+		\includegraphics[width=0.5\linewidth]{media/ps-logo.png}
+	\end{figure}
+
+\hspace{3cm}
+	\begin{center}Dokumentacja projektowa\end{center}
+	\hspace{3cm}
+	\begin{center}\large\textbf{Zarządzanie Systemami Informatycznymi}\end{center}
+	\begin{center}\large\textit{\projectName}\end{center}
+
+\hspace{7cm}
+	\begin{flushright}Kierunek: Informatyka
+		\end{flushright}
+		\begin{flushright}Członkowie zespołu:
+		\par
+		\textit{\authorA}
+		\par
+		\textit{\authorB}
+		\par
+		\textit{\authorC}
+	\end{flushright}
+\vfill
+	\begin{center}Gliwice, 2025/2026\end{center}
+
+\newpage
+\pagenumbering{arabic}
+\tableofcontents
+
+\newpage
+\section{Wprowadzenie}
+\subsection{Role w projekcie}
+Zgodnie z podziałem pracy w zespole, każdy z członków zajął się analizą wybranego rozwiązania typu firewall:
+\begin{itemize}
+    \item Wiktor Jarosz -- OPNsense vs pfSense
+    \item Andrzej Machnik -- IPFire
+    \item Tomasz Solarz -- OpenWrt
+\end{itemize}
+
+\subsection{Cel projektu}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.5\linewidth]{media/logo_ZSI.jpeg}
+		\caption[LogoZSI]{Logo Projektu}
+		\label{fig:logo_ZSI}
+	\end{figure}
+	Celem projektu jest analiza porównawcza najpopularniejszych rozwiązań otwartoźródłowych typu firewall oraz praktyczne przedstawienie konfiguracji systemu IPFire.
+
+\newpage
+\section{Założenia projektowe}
+\subsection{Założenia techniczne i nietechniczne}
+    Projekt zakłada analizę systemów pod kątem ich stabilności, bezpieczeństwa, łatwości konfiguracji oraz wymagań sprzętowych. Rozwiązania muszą być dostępne na licencjach opensource.
+
+\subsection{Stos technologiczny}
+W projekcie wykorzystano następujące narzędzia i systemy:
+\begin{itemize}
+    \item \textbf{OPNsense} – Fork pfSense oparty na HardenedBSD.
+    \item \textbf{IPFire} – Dystrybucja Linuxa wyspecjalizowana w bezpieczeństwie.
+    \item \textbf{pfSense} – Popularne rozwiązanie oparte na FreeBSD.
+    \item \textbf{OpenWrt} – System operacyjny dla urządzeń wbudowanych (routery).
+    \item \textbf{LaTeX} – System przygotowania dokumentacji i prezentacji.
+\end{itemize}
+
+\subsection{Oczekiwane rezultaty projektu}
+Kompleksowe zestawienie cech wymienionych systemów oraz działająca przykładowa konfiguracja reguł firewalla w systemie IPFire.
+
+\newpage
+\section{Charakterystyka systemów firewall}
+\subsection{pfSense vs OPNsense}
+
+\subsubsection{Historia i geneza --- projekt m0n0wall}
+Aby w pełni zrozumieć pfSense i OPNsense, należy zacząć od wspomnienia systemu m0n0wall, z którego wywodzą się oba projekty. Był to otwarty system firewall stworzony w 2003 roku przez Manuela Kaspera. Bazował on na systemie operacyjnym FreeBSD. m0n0wall wprowadził dwie nowości na rynek zapór sieciowych o otwartym kodzie: funkcjonalny interfejs graficzny (GUI) napisany w języku PHP oraz przechowywanie całej konfiguracji urządzenia w jednym pliku XML. Decyzje te sprawiły, że jego konfiguracja była znacznie prostsza, niż konfiguracja innych firewalli, a co za tym idzie --- szybko zyskał on popularność. Problemy sprawiał jednak fakt, że m0n0wall od początku zaprojektowany był dla urządzeń wbudowanych (embedded). Założenie ograniczonych zasobów sprzętowych hamowało możliwości implementacji zaawansowanych funkcji (np. rozbudowanych systemów IDS/IPS).
+
+\subsubsection{Powstanie pfSense}
+Ograniczenia m0n0wall były bezpośrednią motywacją utworzenia projektu pfSense w 2004 roku. pfSense, wydany po raz pierwszy w październiku 2006, to fork m0n0wall, którego założeniem jest rozbudowanie pierwotnego systemu o bardziej zaawansowane funkcjonalności. Z czasem projekt ten zyskał ogromną popularność, a w 2012 roku, pieczę nad nim przejęła amerykańska firma Netgate.
+
+\subsubsection{Powstanie OPNsense}
+Firma Netgate nie była zbytnio lubiana przez społeczność open-source. Pojawiły się konflikty związane z komercjalizacją projektu oraz brakiem transparentności, jak również słabą jakością kodu oraz zaniedbywaniem bezpieczeństwa. Wśród społeczności zaczęło narastać niezadowolenie, którego kulminacją było utworzenie przez holenderską firmę Deciso forka pfSense w 2014 roku pod nazwą OPNsense. Poza powrotem do pełnej otwartości, OPNsense miał również zmodernizować architekturę techniczną systemu, zastępując monolityczny, strukturalny kod PHP nowoczesnym frameworkiem opartym na wzorcu MVC (Model-View-Controller). OPNsense zaadoptował również regularny, 6-miesięczny cykl wydawniczy, w porównaniu do chaotycznego i nieuregulowanego cyklu pfSense Community Edition. Co ciekawe, w 2015 roku, projekt m0n0wall został oficjalnie przerwany, a jego twórca na oficjalnej stronie m0n0wall zachęcił do migracji na OPNsense.
+
+\subsubsection{Architektura}
+Zarówno pfSense, jak i OPNsense współdzielą ten sam fundament technologiczny. Oba rozwiązania opierają się na systemie operacyjnym FreeBSD i wykorzystują ten sam mechanizm filtrowania pakietów: pf (Packet Filter). Największe różnice w architekturze ukazują się więc w warstwie oprogramowania zarządzającego.
+
+\paragraph{Architektura pfSense}
+pfSense, pomimo wieloletniego rozwoju, w wersji open-source nadal opiera się w dużej mierze na przestarzałym, monolitycznym kodzie PHP. Logika systemu oraz interfejs użytkownika są ze sobą ściśle powiązane, co sprawia, że system ten jest mało elastyczny w kontekście utrzymania i rozbudowy. Objawia się to pewnymi krytycznymi problemami. Przykładem jest fakt, że aplikacja webowa pfSense musi operować z uprawnieniami konta root, ponieważ wydaje polecenia bezpośrednio systemowi operacyjnemu. Narusza to podstawową zasadę najmniejszych uprawnień (ang. \textit{principle of least privilege}), a w 2023 roku doprowadziło do odkrycia podatności typu XSS, pozwalającej atakującemu na wykonanie poleceń systemowych jako root. Co więcej, pfSense nie posiada natywnego API, które pozwoliłoby programistom na integrację z zewnętrznymi systemami. Funkcje te muszą być dodawane poprzez nieoficjalne pakiety tworzone przez społeczność.
+
+\paragraph{Architektura OPNsense}
+Jak już zostało wcześniej wspomniane, jednym z głównych założeń OPNsense była modernizacja architektury technicznej. Wprowadzono nowoczesny framework oparty na wzorcu projektowym MVC, co pozwoliło na odseparowanie logiki biznesowej od warstwy graficznej. Umożliwiło to ograniczenie uprawnień serwera WWW, gdzie z góry zdefiniowane komendy wydawane są systemowi poprzez wyizolowany demon systemowy \textit{configd}. OPNsense zawiera również natywne REST API, które znacznie ułatwia jego rozszerzanie i integrację z zewnętrznymi systemami (np. Ansible).
+
+\subsubsection{Funkcje}
+Zarówno pfSense jak i OPNsense oferują rozległy zestaw funkcji sieciowych i bezpieczeństwa. W podstawowej konfiguracji oba rozwiązania zapewniają zaporę sieciową typu SPI (Stateful Packet Inspection), zaawansowany routing czy obsługę protokołu NAT. Oba systemy oferują pełne wsparcie dla wirtualnych sieci LAN (VLAN 802.1Q), konfiguracji multi-WAN (load balancing) oraz redundancji z użyciem protokołu CARP (Common Address Redundancy Protocol), co pozwala na utrzymanie działania systemu w razie awarii jednego z urządzeń. Standardem w obu systemach jest również rozbudowany serwer DHCP, lokalny serwer DNS oraz wsparcie dla kluczowych protokołów VPN (IPsec, OpenVPN, WireGuard).
+
+\paragraph{Kluczowe różnice funkcjonalne}
+Jako, że OPNsense i pfSense mają te same fundamenty, ich lista funkcji jest bardzo podobna. Największe różnice w funkcjonalności między systemami ujawniają się w ofercie oficjalnych pakietów rozszerzających:
+
+\begin{itemize}
+	\item \textbf{Systemy IDS/IPS:} pfSense daje użytkownikowi wybór między dwoma systemami wykrywania i prewencji włamań: starszym oprogramowaniem Snort oraz nowszym, wielowątkowym silnikiem Suricata. OPNsense zrezygnował z utrzymywania Snorta, w pełni skupiając się na głębokiej integracji silnika Suricata z interfejsem graficznym, co znacząco ułatwia zarządzanie i aktualizację reguł.
+	
+	\item \textbf{Filtrowanie ruchu i list blokowania:} W ekosystemie pfSense standardem dla administratorów jest darmowy, bardzo potężny pakiet pfBlockerNG. Służy on do blokowania domen (np. telemetrycznych, reklamowych), złośliwego oprogramowania oraz realizuje blokowanie oparte na geolokalizacji (GeoIP). OPNsense nie posiada tego pakietu, co często jest przytaczane jako główna niedogodność wśród osób chcących przenieść swoją infrastrukturę z pfSense na OPNsense.
+	
+	\item \textbf{Funkcje NGFW (warstwa 7):} Zarówno OPNsense jak i pfSense CE pozwalają na integrację z zewnętrznym modułem Zenarmor, który rozszerza ich możliwości o analizę pakietów w warstwie siódmej, przekształcając je w pełnoprawne NGFW (Next-Generation Firewall). Istnieje jednak różnica w jakości tej integracji. Zenarmor jest oficjalnym partnerem OPNsense, dzięki czemu ich połączenie jest bezproblemowe i bardziej rozbudowane, zapewniając lepszy interfejs użytkownika niż w przypadku pfSense.
+\end{itemize}
+
+\subsubsection{Wymagania sprzętowe}
+Ze względu na współdzielenie systemu operacyjnego, zarówno pfSense, jak i OPNsense posiadają w zasadzie identyczne wymagania sprzętowe. W przeciwieństwie do systemów takich jak OpenWrt, które wspierają bardzo szeroki wachlarz platform wbudowanych, pfSense i OPNsense są projektowane i optymalizowane przede wszystkim pod kątem architektury x86-64. Wsparcie dla architektury ARM jest ograniczone dla pfSense do oficjalnych urządzeń sprzedawanych przez Netgate oraz praktycznie nieistniejące dla OPNsense. To wyklucza m.in. możliwość testów lub wykorzystania tych rozwiązań na systemach takich jak Raspberry Pi.
+
+Dokumentacja OPNsense podaje jako minimalne wymagania sprzętowe dwurdzeniowy procesor o taktowaniu 1 GHz, 3 GB RAM oraz 4 GB pamięci na dysku (rozmiar instalacji) nie używając funkcji wymagających zapisu danych. Rekomendowane specyfikacje to jednak wielordzeniowy procesor o taktowaniu minimum 1-1.5 GHz, 4-8 GB RAM oraz 40-120 GB SSD. Dokumentacja pfSense sugeruje podobne wartości minimalne, z drobną różnicą 1 GB RAMu (zamiast 3) oraz 8 GB przestrzeni dyskowej. Wartości rekomendowane są tutaj takie same. Taki sprzęt będzie w stanie komfortowo utrzymać wysoką przepustowość, nawet przy wykorzystywaniu wielu zaawansowanych funkcji zapory.
+
+\subsubsection{Interfejs zarządzania}
+Zarówno pfSense, jak i OPNsense oferują graficzny interfejs zarządzania przez przeglądarkę internetową. Istnieje jednak znaczna różnica pomiędzy komfortem użytkowania tych interfejsów.
+
+Interfejs pfSense jest bardziej przestarzały. Nawigacja znajduje się w pasku u góry, a wiele ważnych zakładek ukrytych jest pod elementami wyższego poziomu. Sprawia to, że użytkownik niezaznajomiony z ułożeniem interfejsu może mieć początkowo problemy z jego obsługą. Największym problemem UI pfSense jest jednak brak pełnej responsywności. Panel zarządzania nie jest zoptymalizowany dla mniejszych ekranów, co może znacznie utrudniać zarządzanie infrastrukturą z urządzeń mobilnych.
+
+OPNsense oferuje znacznie nowocześniejszy i bardziej intuicyjny interfejs graficzny oparty na frameworku Bootstrap. Główne menu nawigacyjne przeniesione zostało z góry do bocznego panelu. Jednak najważniejszą przewagą OPNsense w kontekście użyteczności jest dynamiczna wyszukiwarka, która pozwala na odnalezienie zakładki konfiguracyjnej poprzez wpisanie nazwy szukanej funkcji, protokołu lub opcji. Interfejs OPNsense jest również w pełni responsywny, dzięki czemu panel wygląda i działa dobrze nawet na urządzeniach mobilnych.
+
+\subsubsection{Licencjonowanie i koszt}
+Zarówno OPNsense, jak i pfSense Community Edition są projektami open-source. Oznacza to, że są one darmowe (nie licząc kosztów sprzętu). Jak już zostało wspomniane, największa różnica ukazuje się w podejściu firm rozwijających te rozwiązania do swoich projektów. Netgate, główny deweloper pfSense, wykazuje od pewnego czasu zmniejszone zaangażowanie w wersję darmową na rzecz wersji komercyjnej --- pfSense Plus. Sprawia to, że niektóre funkcje zostają dodane do pfSense CE z opóźnieniem, a w niektórych sytuacjach nie trafiają do niej wcale. Firma Deciso, będąca głównym sponsorem OPNsense, do tej pory utrzymuje bardzo pozytywną relację ze społecznością open-source. Pomimo istnienia edycji biznesowej, praktycznie wszystkie kluczowe funkcje dostępne są w darmowym OPNsense, a firma nie wydaje się zaniedbywać wersji otwartoźródłowej.
+
+\subsubsection{Aktywność i społeczność}
+OPNsense charakteryzuje się bardzo rygorystycznym i przewidywalnym cyklem wydawniczym. Duże aktualizacje systemu (major releases) publikowane są dokładnie dwa razy w roku, w styczniu i lipcu. Dodatkowo, mniejsze aktualizacje (minor releases) zawierające poprawki bezpieczeństwa i drobne ulepszenia wydawane są regularnie, zazwyczaj co tydzień lub dwa tygodnie. Taki model gwarantuje administratorom wysoką przewidywalność, ułatwiając planowanie okien serwisowych w infrastrukturze. Społeczność skupiona wokół OPNsense jest aktywna, a twórcy utrzymują wysoki poziom transparentności w komunikacji z użytkownikami.
+
+W przypadku pfSense, a w szczególności darmowej wersji Community Edition, cykl wydawniczy jest nieregularny i znacznie rzadszy. Aktualizacje pojawiają się bez z góry określonego harmonogramu. Ponieważ firma Netgate priorytetyzuje rozwój komercyjnej gałęzi pfSense+, społeczność korzystająca z wersji CE często musi dłużej czekać na wdrożenie nowych funkcji. Niemniej jednak, pfSense z racji swojego rynkowego stażu i historycznej popularności wciąż posiada ogromną bazę użytkowników. Przekłada się to na olbrzymią ilość dostępnych w internecie nieoficjalnych poradników i obszerną dokumentację rozwiązywania problemów tworzoną przez samą społeczność.
+
+\subsection{IPFire}
+\todo{Opis przygotowany przez Andrzeja.}
+
+\subsection{OpenWrt}
+
+\subsubsection{Historia i filozofia projektu}
+OpenWrt to jeden z najstarszych i najbardziej utytułowanych projektów typu open-source w świecie sieciowym. Jego korzenie sięgają 2004 roku i są nierozerwalnie związane z routerem Linksys WRT54G. Gdy producent został zmuszony do udostępnienia kodu źródłowego oprogramowania (opartego na Linuxie), społeczność zyskała fundament do stworzenia systemu, który usuwał sztuczne ograniczenia narzucane przez producentów. 
+
+Filozofia OpenWrt opiera się na pełnej kontroli użytkownika nad urządzeniem. W przeciwieństwie do pfSense czy OPNsense, które są kompletnymi systemami "out-of-the-box", OpenWrt w swojej bazowej wersji jest niezwykle minimalistyczny. Użytkownik sam decyduje, jakie funkcjonalności chce doinstalować, co pozwala na uruchomienie nowoczesnego systemu na urządzeniach o bardzo ograniczonych zasobach (np. 128 MB RAM).
+
+\subsubsection{Architektura systemowa i mechanizmy zarządzania}
+OpenWrt wyróżnia się na tle konkurencji unikalnym podejściem do architektury systemu operacyjnego dla urządzeń wbudowanych.
+
+\paragraph{System plików i opkg}
+Większość routerów domowych korzysta z systemu plików typu "squashfs", który jest tylko do odczytu. OpenWrt wykorzystuje partycję \textit{overlay} (zazwyczaj JFFS2), co pozwala na nakładanie zmian użytkownika na bazowy obraz systemu. Dzięki autorskiemu menedżerowi pakietów \textbf{opkg}, system pozwala na instalację ponad 3500 gotowych pakietów. Jest to podejście rewolucyjne, gdyż pozwala przekształcić zwykły router w serwer plików, centralę telefoniczną VoIP (Asterisk), czy nawet sterownik automatyki domowej.
+
+\paragraph{UCI --- Unified Configuration Interface}
+Największą innowacją OpenWrt jest system \textbf{UCI}. Jest to centralna magistrala konfiguracyjna, która standaryzuje sposób zapisu ustawień dla wszystkich usług w systemie. Zamiast edytować dziesiątki różnych plików konfiguracyjnych w \texttt{/etc/}, administrator operuje na prostych plikach w \texttt{/etc/config/}. UCI posiada własne API oraz narzędzie wiersza poleceń, co pozwala na łatwą automatyzację konfiguracji za pomocą skryptów.
+
+\paragraph{System inicjalizacji i procd}
+W przeciwieństwie do systemów BSD, które używają klasycznego \textit{rc.d}, OpenWrt stosuje \textbf{procd} --- lekki proces zarządzania usługami. Odpowiada on za monitorowanie działających procesów, ich automatyczne restartowanie w razie awarii oraz dynamiczne aplikowanie zmian w konfiguracji bez konieczności restartu całego urządzenia.
+
+\subsubsection{Ewolucja Firewalla --- od iptables do nftables}
+OpenWrt od lat bazuje na potężnych mechanizmach filtrowania jądra Linux. W najnowszych wydaniach (seria 21.02 i nowsze) dokonano kluczowej zmiany architektury:
+\begin{itemize}
+    \item \textbf{Firewall4 (fw4):} Zastąpił on wysłużone \textit{iptables} nowoczesnym podsystemem \textbf{nftables}. Oferuje on znacznie wyższą wydajność, prostszą składnię reguł oraz natywne wsparcie dla zestawów danych (sets), co jest kluczowe przy dużych listach blokowania IP.
+    \item \textbf{DSA (Distributed Switch Architecture):} To nowa filozofia zarządzania przełącznikami sieciowymi w OpenWrt. Każdy port fizyczny routera jest teraz widoczny w systemie jako osobny interfejs sieciowy (\textit{eth0}, \textit{lan1}, \textit{wan}), co eliminuje konieczność skomplikowanej konfiguracji VLAN-ów na poziomie procesora przełącznika i czyni konfigurację bardziej intuicyjną, zbliżoną do profesjonalnych rozwiązań sieciowych.
+\end{itemize}
+
+\subsubsection{Bezpieczeństwo i aktualizacje}
+OpenWrt uważa się za jeden z najbezpieczniejszych systemów dla urządzeń brzegowych. Wynika to z kilku czynników:
+\begin{enumerate}
+    \item \textbf{Minimalizm:} Domyślna instalacja nie zawiera żadnych niepotrzebnych usług, co drastycznie zmniejsza powierzchnię ataku.
+    \item \textbf{Szybkość reakcji:} Dzięki ogromnej społeczności, poprawki dla nowo odkrytych podatności (tzw. \textit{zero-day}) pojawiają się często szybciej niż w oprogramowaniu komercyjnym.
+    \item \textbf{Hardening:} OpenWrt stosuje zaawansowane mechanizmy ochrony jądra oraz izolacji procesów, co jest rzadkością w segmencie routerów konsumenckich.
+\end{enumerate}
+
+\subsubsection{Interfejsy i łatwość obsługi}
+Chociaż OpenWrt słynie z potężnego interfejsu CLI (dostępnego przez SSH), większość użytkowników korzysta z interfejsu graficznego \textbf{LuCI}. LuCI jest napisane w języku Lua i charakteryzuje się ogromną modularnością. Każda dodatkowa funkcja doinstalowana do systemu (np. serwer VPN WireGuard) posiada swój dedykowany moduł \texttt{luci-app-*}, który integruje się z menu głównym. Warto zauważyć, że LuCI jest znacznie lżejsze od interfejsów pfSense/OPNsense, co pozwala na płynną pracę nawet na słabszym sprzęcie.
+
+\subsubsection{Wsparcie sprzętowe i platformy}
+To najsilniejsza strona OpenWrt. System wspiera tysiące urządzeń od różnych producentów (TP-Link, Netgear, Xiaomi, Linksys, ASUS). 
+\begin{itemize}
+    \item \textbf{Szeroka gama architektur:} MIPS, ARM, x86\_64, RISC-V.
+    \item \textbf{Hardware Offloading:} OpenWrt wspiera sprzętową akcelerację routingu (PPE/NSS) w wybranych procesorach, co pozwala domowym routerom osiągać gigabitowe przepustowości przy minimalnym obciążeniu procesora.
+    \item \textbf{Zastosowania specjalistyczne:} Dzięki swojej lekkości, OpenWrt jest bazą dla wielu innych projektów, takich jak GL.iNet (routery podróżne) czy urządzenia do audytów bezpieczeństwa (WiFi Pineapple).
+\end{itemize}
+
+\newpage
+\section{Realizacja projektu - Konfiguracja IPFire}
+W tej sekcji przedstawiono proces instalacji i przykładową konfigurację reguł ruchu w systemie IPFire, przygotowaną przez Andrzeja Machnika.
+
+\subsection{Instalacja i wstępna konfiguracja}
+\todo{Andrzej: Opis instalacji i przypisania interfejsów (Green, Red, Blue, Orange).}
+
+\subsection{Przykładowa reguła Firewall}
+\todo{Andrzej: Zrzuty ekranu i opis reguły blokującej lub przekierowania portów.}
+
+\newpage
+\section{Wnioski}
+    Systemy firewall typu OSS stanowią realną alternatywę dla rozwiązań komercyjnych. OpenWrt wyróżnia się na tle pfSense czy OPNsense swoją lekkością i optymalizacją pod kątem urządzeń o architekturze innej niż x86.
+
+\newpage
+\section{Bibliografia}
+\begin{enumerate}
+    \item Dokumentacja OpenWrt: \texttt{https://openwrt.org/docs/}
+    \item Oficjalna strona OPNsense: \texttt{https://opnsense.org/}
+    \item Oficjalna strona pfSense: \texttt{https://www.pfsense.org/}
+    \item Oficjalna strona IPFire: \texttt{https://www.ipfire.org/}
+\end{enumerate}
+
+\end{document}
