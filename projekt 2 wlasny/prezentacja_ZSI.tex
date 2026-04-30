@@ -1,0 +1,195 @@
+\documentclass[10pt]{beamer}
+\usetheme{Warsaw}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstset{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    literate={ą}{{\k{a}}}1 {ć}{{\'c}}1 {ę}{{\k{e}}}1 {ł}{{\l{}}}1 {ń}{{\'n}}1 {ó}{{\'o}}1 {ś}{{\'s}}1 {ź}{{\'z}}1 {ż}{{\.z}}1 {Ą}{{\k{A}}}1 {Ć}{{\'C}}1 {Ę}{{\k{E}}}1 {Ł}{{\L{}}}1 {Ń}{{\'N}}1 {Ó}{{\'O}}1 {Ś}{{\'S}}1 {Ź}{{\'Z}}1 {Ż}{{\.Z}}1
+}
+
+\author{Tomasz Solarz}
+\title[Azure CLI \hspace{2em}\insertframenumber/\inserttotalframenumber]{
+	Automatyzacja i zarządzanie zasobami w chmurze za pomocą Azure CLI
+}
+
+\logo{\includegraphics[height=1cm]{media/logoMS.png}} 
+\institute{
+	\includegraphics[height=1cm]{media/logo.jpg}\\
+	Wydział Matematyki Stosowanej\\
+	Katedra Metod Matematycznych w Technice i Informatyce (RMS3)
+}
+\date{\today}  
+
+\begin{document}
+\begin{frame}
+	\titlepage
+\end{frame}
+
+\section*{Agenda}
+\begin{frame}
+    \frametitle{Agenda}
+	\tableofcontents
+\end{frame}
+
+\section{Wprowadzenie}
+\begin{frame}
+    \frametitle{Czym jest Azure CLI?}
+    \begin{block}{Definicja}
+        Azure Command-Line Interface (CLI) to wieloplatformowe narzędzie wiersza poleceń służące do łączenia się z platformą Azure i wykonywania poleceń administracyjnych w jej zasobach.
+    \end{block}
+    \begin{itemize}
+        \item Pozwala na automatyzację zadań poprzez skrypty.
+        \item Dostępne na Windows (PowerShell/CMD), macOS, Linux.
+        \item Działa również w Azure Cloud Shell bezpośrednio w przeglądarce.
+    \end{itemize}
+\end{frame}
+
+\section{Instalacja i Logowanie}
+\begin{frame}[fragile]
+    \frametitle{Pierwsze kroki}
+    \begin{block}{Instalacja (Windows)}
+        Najprościej za pomocą instalatora MSI lub polecenia:
+        \begin{lstlisting}[language=bash]
+winget install -e --id Microsoft.AzureCLI
+        \end{lstlisting}
+    \end{block}
+    \begin{block}{Logowanie}
+        Aby połączyć się z kontem Azure, należy użyć:
+        \begin{lstlisting}[language=bash]
+az login
+        \end{lstlisting}
+        Otworzy to okno przeglądarki w celu uwierzytelnienia.
+    \end{block}
+\end{frame}
+
+\section{Podstawowe polecenia}
+\begin{frame}[fragile]
+    \frametitle{Zarządzanie Grupami Zasobów}
+    Grupa zasobów (Resource Group) to logiczny kontener na zasoby.
+    \begin{lstlisting}[language=bash]
+# Tworzenie grupy zasobów
+az group create --name MojaGrupa --location westeurope
+
+# Lista grup zasobów
+az group list --output table
+
+# Usuwanie grupy (i wszystkich jej zasobów)
+az group delete --name MojaGrupa --yes --no-wait
+    \end{lstlisting}
+\end{frame}
+
+\section{Przykłady użycia}
+\subsection{Maszyny Wirtualne}
+\begin{frame}[fragile]
+    \frametitle{Tworzenie Maszyny Wirtualnej (VM)}
+    Azure CLI pozwala na szybkie powołanie infrastruktury:
+    \begin{lstlisting}[language=bash]
+az vm create \
+  --resource-group MojaGrupa \
+  --name MojaMaszyna \
+  --image Ubuntu2204 \
+  --admin-username azureuser \
+  --generate-ssh-keys
+    \end{lstlisting}
+    \begin{itemize}
+        \item Powyższe polecenie tworzy VM wraz z siecią, adresem IP i kluczami SSH.
+    \end{itemize}
+\end{frame}
+
+\subsection{Web Apps}
+\begin{frame}[fragile]
+    \frametitle{Wdrażanie Web App}
+    Azure CLI ułatwia wdrażanie aplikacji webowych:
+    \begin{lstlisting}[language=bash]
+# Tworzenie planu usługi App Service
+az appservice plan create --name MojPlan --resource-group MojaGrupa --sku B1 --is-linux
+
+# Tworzenie aplikacji webowej (Python)
+az webapp create --resource-group MojaGrupa --plan MojPlan --name MojaAplikacja316056 --runtime "PYTHON:3.9"
+    \end{lstlisting}
+\end{frame}
+
+\section{Zaawansowane funkcje}
+\begin{frame}[fragile]
+    \frametitle{Zapytania i Formaty Wyjściowe}
+    Azure CLI wspiera filtrowanie wyników za pomocą zapytań JMESPath:
+    \begin{lstlisting}[language=bash]
+# Pobranie tylko adresu IP maszyny wirtualnej
+az vm list-ip-addresses --name MojaMaszyna --query "[].virtualMachine.network.publicIpAddresses[0].ipAddress" -o tsv
+    \end{lstlisting}
+    Dostępne formaty wyjściowe (`--output` / `-o`):
+    \begin{itemize}
+        \item \textbf{json} (domyślny)
+        \item \textbf{table} (czytelna tabela)
+        \item \textbf{tsv} (wartości oddzielone tabulatorami)
+        \item \textbf{yaml}
+    \end{itemize}
+\end{frame}
+
+\section{Repozytorium i kod}
+\begin{frame}
+    \frametitle{Repozytorium projektu}
+    \begin{block}{Kod źródłowy i skrypty}
+        Przykłady skryptów automatyzujących (`.sh` / `.ps1`) oraz kody źródłowe infrastruktury znajdują się w repozytorium:
+    \end{block}
+    \begin{center}
+        \url{https://github.com/tsolarz/ZSI-AzureCLI-Project}
+    \end{center}
+    \begin{itemize}
+        \item Skrypty tworzące pełne środowisko testowe.
+        \item Szablony ARM i pliki Bicep.
+        \item Przykłady integracji z CI/CD (GitHub Actions).
+    \end{itemize}
+\end{frame}
+
+\section{Podsumowanie}
+\begin{frame}
+    \frametitle{Podsumowanie i wnioski}
+    \begin{block}{Zalety korzystania z Azure CLI}
+    \begin{itemize}
+        \item \textbf{Szybkość:} Znacznie szybsze niż przeklikiwanie się przez Portal Azure.
+        \item \textbf{Powtarzalność:} Możliwość zapisania kroków w formie skryptu.
+        \item \textbf{Integracja:} Łatwe użycie w potokach DevOps.
+        \item \textbf{Wszechstronność:} Dostęp do niemal każdej usługi Azure.
+    \end{itemize}
+    \end{block}  
+\end{frame}
+
+\begin{frame}
+	\frametitle{Dziękuję za uwagę!}
+	\begin{center}
+	\textbf{Tomasz Solarz}\\[1cm]
+	\textbf{Dziękuję za uwagę!}\\
+    Pytania?
+	\end{center}
+\end{frame}
+\end{document}
