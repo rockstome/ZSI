@@ -1,0 +1,59 @@
+\section{Wstęp}
+
+\subsection{Role w projekcie}
+[span_0](start_span)Zgodnie z podziałem prac w zespole, każdy z członków zajął się innym aspektem wdrażania rozwiązań chmurowych[span_0](end_span):
+\begin{itemize}
+    \item **Osoba 1**: Przygotowanie infrastruktury klastra Azure Kubernetes Service (AKS).
+    \item **Osoba 2**: Deployment serwera Nginx oraz automatyzacja aktualizacji.
+    \item **Tomasz Solarz (Osoba 3)**: Audyt niezawodności, monitorowanie dostępności oraz weryfikacja procedur Rollback.
+\end{itemize}
+
+\subsection{Cel projektu}
+[span_1](start_span)[span_2](start_span)Celem projektu jest analiza mechanizmów High Availability w AKS poprzez praktyczną realizację strategii aktualizacji bezprzerwowej (\textit{Rolling Update}) oraz badanie stabilności systemu w warunkach awaryjnych[span_1](end_span)[span_2](end_span).
+
+\section{Założenia projektowe}
+
+\subsection{Stos technologiczny}
+[span_3](start_span)W projekcie wykorzystano następujące narzędzia[span_3](end_span):
+\begin{itemize}
+    [span_4](start_span)\item **AKS**: Środowisko uruchomieniowe kontenerów[span_4](end_span).
+    [span_5](start_span)\item **Nginx**: Aplikacja testowa[span_5](end_span).
+    \item **Azure Monitor**: Narzędzie do analizy wydajności i logów.
+    [span_6](start_span)\item **LaTeX**: System przygotowania dokumentacji[span_6](end_span).
+\end{itemize}
+
+\section{Realizacja zadań i scenariusze testowe}
+
+\subsection{Scenariusz 1: Rolling Update i Monitoring (Tomek)}
+Jako osoba odpowiedzialna za niezawodność, Tomasz Solarz wdrożył system ciągłego monitorowania zapytań HTTP podczas procesu aktualizacji. Kluczowym elementem było wykorzystanie sond gotowości (\textit{Readiness Probes}), które zapobiegają kierowaniu ruchu do niegotowych kontenerów.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{stage_1_2_scheme.png}
+    \caption{Etapy 1 i 2: Stabilny stan V1 oraz proces wdrażania V2 z wykorzystaniem sond Readiness.}
+\end{figure}
+
+\subsection{Scenariusz 2: Analiza wydajności i Autoskalowanie}
+W ramach ambitnego podejścia, Tomasz Solarz przeprowadził testy pod obciążeniem, weryfikując działanie mechanizmu Horizontal Pod Autoscaler (HPA). Zaobserwowano, że klaster AKS automatycznie zwiększa liczbę replik w odpowiedzi na wzrost utylizacji procesora, zachowując 100\% Uptime.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{stage_3_4_performance.png}
+    \caption{Etap 3: Skalowanie i audyt wydajności pod obciążeniem.}
+\end{figure}
+
+\subsection{Scenariusz 3: Wadliwa aktualizacja i Rollback}
+Najważniejszym testem była symulacja błędu \textit{ImagePullBackOff}. Dzięki konfiguracji wykonanej przez Tomasza, system nie dopuścił do wyłączenia starych, działających podów, dopóki nowe nie zgłosiły gotowości. Po wykryciu błędu wykonano procedurę \texttt{kubectl rollout undo}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{rollback_multi_cluster.png}
+    \caption{Etap 4: Procedura Rollback i przywracanie stabilności po wykryciu błędnego obrazu.}
+\end{figure}
+
+\section{Wnioski końcowe}
+\begin{itemize}
+    [span_7](start_span)[span_8](start_span)\item **Stabilność**: Strategia \textit{Rolling Update} w AKS zapewnia zerowy czas przestoju przy poprawnej konfiguracji sond[span_7](end_span)[span_8](end_span).
+    [span_9](start_span)\item **Bezpieczeństwo**: Mechanizm Rollback pozwala na natychmiastowe przywrócenie usługi bez wpływu na użytkownika końcowego[span_9](end_span).
+    [span_10](start_span)[span_11](start_span)\item **Spostrzeżenia**: Monitorowanie logów w czasie rzeczywistym jest niezbędne do identyfikacji błędów typu "silent failure" podczas wdrożeń[span_10](end_span)[span_11](end_span).
+\end{itemize}
